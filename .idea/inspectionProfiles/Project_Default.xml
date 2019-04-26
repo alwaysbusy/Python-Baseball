@@ -14,6 +14,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="list.__div__" />
+          <option value="stats.pitching.data" />
         </list>
       </option>
     </inspection_tool>
