@@ -14,7 +14,7 @@ try:
     info.loc[info['team'] == 'hometeam', 'team'] = '0'
     info = info.sort_values(['year', 'game_id', 'team']).reset_index(drop=True)
 
-    events = plays_frame.query("~(event.str.contains('^\d+') & ~event.str.contains('E'))")
+    events = plays_frame.query("~(event.str.contains('^\\d+') & ~event.str.contains('E'))")
     events = events.query("~event.str.contains('^(?:P|C|F|I|O)')")
     events = events.drop(['type', 'player', 'count', 'pitches'], axis=1)
     events = events.sort_values(['team', 'inning']).reset_index()
